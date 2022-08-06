@@ -17,8 +17,8 @@ const Login = () => {
 
 
         if(email.trim() && password.trim()) {
-            const res = await fetch(" https://n36-blog.herokuapp.com/login?login=Nurulloh&password=nur2004ub14", {
-                // const res = await fetch(" https://reqres.in/api/login", {
+            // const res = await fetch(" https://n36-blog.herokuapp.com/login", {
+            const res = await fetch(" https://reqres.in/api/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

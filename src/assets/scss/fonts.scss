@@ -14,13 +14,13 @@
     font-weight: 500;
 }
 
-// @font-face {
-//     font-family: 'Segoe UI';
-//     src: url(../fonts/SegoeUI-Regular.ttf);
-//     font-weight: 400;
-// }
-// @font-face {
-//     font-family: 'Segoe UI';
-//     src: url(../fonts/SegoeUI-Bold.ttf);
-//     font-weight: 700;
-// }
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/SegoeUI-Bold.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/SegoeUI.ttf);
+    font-weight: 700;
+}

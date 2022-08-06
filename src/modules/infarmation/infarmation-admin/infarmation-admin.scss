@@ -3,8 +3,7 @@
 
 
 .infarmation-admin{
-
-    
+  margin-bottom: 96px;
 }
 
 .infarmation-admin-item{
@@ -21,11 +20,30 @@
         border: none;
         outline: none;
         background: none;
+        cursor: pointer;
     }
 }
 
 .infarmation-admin-post{
     margin-left: 150px;
+    width: 737px;
+
+    >h3{
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: #474747;
+
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    >h2{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #000000;
+    }
 }
 
 .infarmation-admin-post-item{
@@ -99,5 +117,37 @@
         font-size: 16px;
         line-height: 32px;
         color: #474747;  
+    }
+}
+
+.infarmation-admin-semper{
+    margin-top: 32px;
+    border-left: 1px solid #bdbcbc;
+    padding-left: 22px;
+
+    >p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;
+
+        margin-bottom: 50px;
+    }
+
+    >span{
+        color: #474747;
+        font-style: 15px;
+    }
+}
+
+.infarmation-admin-lesson{
+
+    >li{
+        margin-bottom: 40px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;
     }
 }

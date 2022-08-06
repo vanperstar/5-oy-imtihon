@@ -1,13 +1,12 @@
-import Footer from "../../components/footer/footer"
-import Header from "../../components/header/header"
+import { Route, Routes } from "react-router-dom";
 import AdminPost from "./admin-post/admin-post"
 
 const RecentPosts = () => {
     return(
         <>
-        <Header />
-        <AdminPost />
-        <Footer />
+        <Routes>
+            <Route path="/" element={<AdminPost />} />
+        </Routes>
         </>
     )
 }

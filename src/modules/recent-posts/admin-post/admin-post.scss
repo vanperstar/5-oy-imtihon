@@ -2,7 +2,7 @@
 
 .admin-post{
     display: flex;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .admin-left{
@@ -52,7 +52,6 @@
 }
 
 .posts > h2{
-    margin-bottom: 12px;
 
     font-style: normal;
     font-weight: 400;
@@ -62,12 +61,17 @@
 
 .posts-items{
     list-style: none;
+
+    >li{
+        margin-top: 50px;
+        border-bottom: 2px solid #DFDFDF;
+    }
 }
 
 .posts-item{
     list-style: none;
-    border-bottom: 2px solid #DFDFDF;
     margin-top: 46px;
+    text-decoration: none;
 }
 
 .posts-item > span{
@@ -79,7 +83,7 @@
 }
 
 .posts-item > b{
-    margin-left: 70%;
+    margin-left: 65%;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;

@@ -33,6 +33,38 @@ const InfarmationAdmin = () => {
                         <h4>Information overload</h4>
                         <span>Vivamus dictum ultrices tortor. Ut imperdiet, enim in suscipit dignissim, mauris massa pellentesque augue, quis ultricies sem tortor et velit.</span>
                     </div>
+                    <div className='infarmation-admin-semper'>
+                        <p>
+                            Sed commodo ligula vitae mollis tristique. Maecenas egestas semper mauris. Duis tempus blandit ultrices. Proin elit.uz nulla, viverra id suscipit quis, tristique a dolor.
+                        </p>
+                        <span>'Designing For Sustainability, Tim Frick, 2014'</span>
+                    </div>
+                    <h3>Lessons Learnt: Best Practice</h3>
+                    <ul className='infarmation-admin-lesson'>
+                        <li>Morbi congue odio vel luctus aliquam. Morbi accumsan sapien at lorem ultricies aliquam eu eu nisl. Suspendisse.</li>
+                        <li>Maecenas sit amet ligula auctor neque aliquam placerat et ac neque. Proin risus eros, fringilla eu suscipit dignissim, dignissim.</li>
+                    </ul>
+                    <h2>More like this</h2>
+                    <ul className='posts-items'>
+                        <li className='posts-item'>
+                            <span>September 24.2020</span>
+                            <b>Design theory</b>
+                            <p>How to choose the right colors when creating a website?</p>
+                            <div> <img src={hour} alt="" /> 3 minutes read</div>
+                        </li>
+                        <li className='posts-item'>
+                            <span>September 24.2020</span>
+                            <b>User Interface</b>
+                            <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
+                            <div> <img src={hour} alt="" /> 3 minutes read</div>
+                        </li>
+                        <li className='posts-item'>
+                            <span>September 24.2020</span>
+                            <b>Design theory</b>
+                            <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
+                            <div> <img src={hour} alt="" /> 3 minutes read</div>
+                        </li>
+                </ul>
                 </div>
             </div>
         </div>

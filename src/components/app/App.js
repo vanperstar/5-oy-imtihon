@@ -13,14 +13,12 @@ function App() {
   return (
     <>
 
-      {/* {
+      {
         token ? <RecentPosts /> : <Login />
-      } */}
+      }
 
     <Routes>
-      <Route path='/' element={<Infarmation />} />
-      {/* <Route path='/' element={<RecentPosts />} /> */}
-      {/* <Route path='/' element={<Login />} /> */}
+      <Route path='/infarmation' element={<Infarmation />} />
     </Routes>
     </>
   );
