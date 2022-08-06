@@ -1,0 +1,103 @@
+@import '../../../assets/scss/general.scss';
+@import '../../recent-posts/admin-post/admin-post.scss';
+
+
+.infarmation-admin{
+
+    
+}
+
+.infarmation-admin-item{
+    display: flex;
+}
+
+.infarmation-admin-button{
+    flex-direction: column;
+    display: flex;
+    margin-left: 80px;
+
+    >button{
+        margin-bottom: 50px;
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
+
+.infarmation-admin-post{
+    margin-left: 150px;
+}
+
+.infarmation-admin-post-item{
+
+    margin-bottom: 45px;
+
+    >div{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #777777;
+    }
+
+    >p{
+        width: 90%;
+        margin: 25px 0;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #474747;
+    }
+
+    >span{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #777777;
+        margin-right: 10px;       
+    }
+
+    >hr{
+        display: inline-block;
+        height: 13px;
+        background: #000;
+    }
+
+    >b{
+        align-items: center;
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #777777;
+
+        >img{
+            transform: translateY(4px);
+        }
+    }
+}
+
+.infarmation-admin-desc{
+    margin-top: 50px;
+
+    >p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;
+    }
+
+    >h4{
+        margin: 50px 0;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: #474747;
+    }
+
+    >span{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;  
+    }
+}

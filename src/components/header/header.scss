@@ -1,0 +1,231 @@
+@import '../../assets/scss/general.scss';
+
+.header{
+    z-index: 50;
+    width: 100%;
+    margin-top: 26px !important; 
+    margin-bottom: 90px !important ;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #E5E5E5;
+}
+
+
+
+
+.header-items{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: -40px;
+    gap: 30px;
+}
+
+.header-items > li{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #9A9A9A;
+
+    &:active{
+        color: #3D3D3D;
+        border-color: #3D3D3D;
+    }
+}
+
+.header-item{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #9A9A9A;
+    text-decoration: none;
+
+    &:active{
+        color: #3D3D3D;
+        border-color: #3D3D3D;
+    }
+}
+
+.header > input {
+    position: sticky;
+    border: none;
+    outline: none;
+    padding: 12px 14px;
+    width: 256px;
+    margin-left: auto;
+    border-radius: 3px;
+    background: #F4F4F4;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #474747;
+}
+
+.header > button{
+    width: 40px;
+    height: 40px;
+    background: #ffba9d;
+    border: none;
+    border-radius: 3px;
+    transform: translateX(-30px);
+    cursor: pointer;
+    >img{
+        transform: translateY(2px);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .header-items{
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .header-items > li{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 21px;
+        color: #9A9A9A;
+    
+        &:active{
+            color: #3D3D3D;
+            border-color: #3D3D3D;
+        }
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .header-items{
+        list-style: none;
+        display: none;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .header-items > li{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #9A9A9A;
+    
+        &:active{
+            color: #3D3D3D;
+            border-color: #3D3D3D;
+        }
+    }
+
+    .toggle{
+        transform: translateY(-85px);
+        margin-left: auto;
+        position: relative;
+        width: 35px;
+        height: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+        }
+    
+    
+    .toggle::after, 
+    .toggle::before, 
+    .toggle > span{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: rgba(0, 0, 0, 0.788);
+        border-radius: 4px;
+        transition: transform .2s ease;
+    }
+    
+    .toggle::before{
+        top: 0;
+    }
+    .toggle > span{
+        margin: auto;
+    }
+    .toggle::after{
+        bottom: 0;
+    }
+    
+    
+    .toggle--active::before{
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    
+    }
+    
+    .toggle--active::after{
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+    
+    .toggle--active > span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .header{
+        display: block;
+        text-align: center;
+    }
+
+    .header > a{
+        display: block;
+        transform: translateX(-30%);
+    }
+
+    .header > input{
+
+        width: 320px;
+    }
+
+    .header > button{
+        width: 40px;
+        height: 40px;
+        background: #ffba9d;
+        border: none;
+        border-radius: 3px;
+        transform: translateX(-30px) translateY(2px);
+        cursor: pointer;
+        >img{
+            transform: translateY(3px);
+        }
+    }
+
+    .header > input{
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .toggle{
+        transform: translateY(-115px);
+    }
+
+}
+
+@media screen and (max-width: 478px) {
+    
+    .header > button{
+        width: 40px;
+        height: 40px;
+        transform: translateX(145px) translateY(-40px);
+    }
+
+    .header > input{
+        width: 100%;
+    }
+
+    .toggle{
+        transform: translateY(-155px);
+    }
+}

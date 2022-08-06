@@ -1,0 +1,170 @@
+@import '../../../assets/scss/general.scss';
+
+.admin-post{
+    display: flex;
+    margin-top: 100px;
+}
+
+.admin-left{
+    width: 328px;
+    margin-right: 100px;
+}
+
+.admin-left > h2{
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #474747;
+}
+
+.admin-left > p{
+    width: 99.9%;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #474747;
+}
+
+.admin-left > span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #474747;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    > img{
+        transform: translateY(7px);
+        margin-left: 12px;
+        background: #F4F4F4;
+        border-radius: 3px;
+        padding: 8px 6px;
+    }
+}
+
+.admin-left > img{
+    margin-right:24px;
+}
+
+.posts{
+    width: 740px;
+}
+
+.posts > h2{
+    margin-bottom: 12px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.posts-items{
+    list-style: none;
+}
+
+.posts-item{
+    list-style: none;
+    border-bottom: 2px solid #DFDFDF;
+    margin-top: 46px;
+}
+
+.posts-item > span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777777;
+}
+
+.posts-item > b{
+    margin-left: 70%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777777;
+}
+
+.posts-item > p{
+    margin: 20px 0;
+    width: 70%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    color: #474747;
+}
+
+.posts-item > div{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777777;
+    margin-bottom: 15px;
+    >img{
+        transform: translateY(5px);
+    }
+}
+
+
+.pagination{
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+    margin-top: 55px;
+    margin-bottom: 150px;
+}
+
+.pagination-item{
+    margin: 0 8px;
+}
+
+.pagination-item > a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #474747;
+
+    &:active{
+        color: #FFBA9D;
+    }
+}
+
+
+
+@media screen and (max-width: 975px) {
+    .admin-left{
+        display: none;
+    }
+
+    .posts{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .posts-item > b{
+        margin-left: 60%;
+    }
+
+    .posts-item > p{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .posts-item > b{
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .posts-item > b{
+        margin-left: 30%;
+    }
+}
