@@ -5,6 +5,7 @@ import Login from '../../modules/login/login';
 import { useContext } from 'react';
 import Infarmation from '../../modules/infarmation/infarmation';
 import { AuthContext } from '../../context/auth-contex';
+import NotFount from '../../modules/not-fount/not-fount';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
     <Routes>
       <Route path='/infarmation' element={<Infarmation />} />
+      <Route path='/notfount' element={<NotFount />} />
     </Routes>
     </>
   );

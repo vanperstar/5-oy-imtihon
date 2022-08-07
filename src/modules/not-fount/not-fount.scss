@@ -1,1 +1,52 @@
-@import '../../assets/scss/general.scss'
+@import '../../assets/scss/general.scss';
+
+.not-fount{
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    >div{
+        margin-top: 50px !important;
+        // width: 40%;
+        margin: auto;
+
+        >h2{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #474747;            
+        }
+        >p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #474747;
+            margin-top: 20px !important;
+            margin: auto;
+        }
+        
+        >b{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #474747;
+            margin-bottom: 40px !important;
+            display: block;
+        }
+    }
+}
+
+.not-fount-link{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #474747;
+}

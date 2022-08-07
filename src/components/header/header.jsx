@@ -12,19 +12,19 @@ const Header = () => {
                 </Link>
                 <ul className="header-items">
                     <li>
-                        <Link className='header-item' to='/all'>All</Link>
+                        <Link className='header-item' to='/notfount'>All</Link>
                     </li>
                     <li>
-                        <Link className='header-item' to='/designthory'>Design Theory</Link>
+                        <Link className='header-item' to='/notfount'>Design Theory</Link>
                     </li>
                     <li>
-                        <Link className='header-item' to='/ux'>UX</Link>
+                        <Link className='header-item' to='/notfount'>UX</Link>
                     </li>
                     <li>
-                        <Link className='header-item' to='/ui'>UI</Link>
+                        <Link className='header-item' to='/notfount'>UI</Link>
                     </li>
                     <li>
-                        <Link className='header-item' to='/typography'>Typography</Link>
+                        <Link className='header-item' to='/notfount'>Typography</Link>
                     </li>
                 </ul>
                 <input type="search" name="search" placeholder='Search' />
