@@ -4,21 +4,34 @@ import github from '../../../assets/img/git-hub.png'
 import twitter from '../../../assets/img/twitter.png'
 import injon from '../../../assets/img/injon.png'
 import explore from '../../../assets/img/explore.png'
-import hour from '../../../assets/img/hour.png'
 import paginationLeft from '../../../assets/img/pagination-left.png'
 import paginationRight from '../../../assets/img/pagination-right.png'
 import './admin-post.scss'
 import Header from "../../../components/header/header";
 import Footer from "../../../components/footer/footer";
+import { ListItem } from "../admin-post-item/admin-post-item";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { deleteUser, getUsers } from "../../../store/reducer/user.slice";
 
 
 const AdminPost = () => {
-
-
-    // const {filter, setFilter, million, Id, setId, searchBody} = useau
-
-
-
+    const users = useSelector(state => state.users.users) 
+    const status = useSelector(state => state.users.status) 
+    const dispatch = useDispatch()
+    console.log(users);
+    const handleDeleteUser = (e) => {
+        if(e.target.matches('button[data-id')) {
+            const id = e.target.dataset.id
+            dispatch(deleteUser(id))
+        }
+    }
+    
+    useEffect(() => {
+        if(status === 'idle') {
+            dispatch(getUsers())
+        }
+    }, [dispatch, status])
 
     return(
         <>
@@ -37,39 +50,10 @@ const AdminPost = () => {
                 </div>
                 <div className='posts'>
                     <h2>Recent Posts</h2>
-                    <ul className='posts-items'>
-                        <li>
-                            <Link className='posts-item' to='/infarmation'>
-                                <span>September 24.2020</span>
-                                <b>Design theory</b>
-                                <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
-                                <div> <img src={hour} alt="" /> 3 minutes read</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className='posts-item' to='/infarmation'>
-                                <span>September 24.2020</span>
-                                <b>Design theory</b>
-                                <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
-                                <div> <img src={hour} alt="" /> 3 minutes read</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className='posts-item' to='/infarmation'>
-                                <span>September 24.2020</span>
-                                <b>Design theory</b>
-                                <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
-                                <div> <img src={hour} alt="" /> 3 minutes read</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className='posts-item' to='/infarmation'>
-                                <span>September 24.2020</span>
-                                <b>Design theory</b>
-                                <p>Bad Design vs. Good Design: 5 Examples We can Learn From</p>
-                                <div> <img src={hour} alt="" /> 3 minutes read</div>
-                            </Link>
-                        </li>
+                    <ul className='posts-items' onClick={handleDeleteUser}>
+                    {
+                        users.posts?.map((item) => <ListItem key={item.id} title={item.title} id={item.id} created_time={item.created_time} category_name={item.category_name}/>)
+                    }
                     </ul>
                     <div className='pagination'>
                         <button className='pagination-item'>
