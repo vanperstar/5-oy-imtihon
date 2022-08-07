@@ -9,7 +9,7 @@ const NotFount = () => {
     return(
         <>
             <Header />
-            <div className='container'>
+            <div className='fount container'>
                 <div className='not-fount'>
                     <img src={notFount} alt="" />
                     <div>

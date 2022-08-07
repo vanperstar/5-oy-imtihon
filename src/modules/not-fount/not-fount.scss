@@ -50,3 +50,19 @@
     text-align: center;
     color: #474747;
 }
+
+
+
+@media screen and (max-width: 700px) {
+
+    .fount{
+        padding: 0px 20px;
+    }
+
+    .not-fount{
+
+        >img{
+            width: 100%;
+        }
+    }
+}

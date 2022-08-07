@@ -28,7 +28,7 @@ const AdminPost = () => {
                     <h2>What I do!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis.</p>
                     <span>
-                        <Link className="admin-left-explore" to='/not'>EXPLORE ME <img src={explore} alt="" /> </Link>
+                        <Link className="admin-left-explore" to='/notfount'>EXPLORE ME <img src={explore} alt="" /> </Link>
                     </span>
                     <img src={fecebook} alt="" />
                     <img src={github} alt="" />

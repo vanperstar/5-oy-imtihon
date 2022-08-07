@@ -8,4 +8,4 @@ GET https://n36-blog.herokuapp.com/posts/bycategory?page=1
 GET https://n36-blog.herokuapp.com/login?login=Nurulloh&password=nur2004ub14
 
 ###
-GET https://n36-blog.herokuapp.com/posts/bycategory?page=1
+GET https://n36-blog.herokuapp.com/posts/bycategory?UX=1
