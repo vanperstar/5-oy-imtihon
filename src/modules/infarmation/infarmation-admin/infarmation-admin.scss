@@ -151,3 +151,43 @@
         color: #474747;
     }
 }
+
+
+
+@media screen and (max-width: 1168px) {
+    .infarmation-admin-button{
+        margin-left: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .infarmation-admin-button{
+        margin-left: 30px;
+    }
+
+    .infarmation-admin-post{
+        width: 700px;
+        margin: auto;
+
+        >img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .infarmation-admin-button{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .infarmation-admin-post{
+        width: 600px;
+    }
+
+    .infarmation-admin-post-item > p {
+        width: 100%;
+    }
+}

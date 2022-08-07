@@ -3,12 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import RecentPosts from '../../modules/recent-posts/recent-posts';
 import Login from '../../modules/login/login';
 import { useContext } from 'react';
-import { LoginContext } from '../../context/login-contex';
 import Infarmation from '../../modules/infarmation/infarmation';
+import { AuthContext } from '../../context/auth-contex';
 
 function App() {
 
-  const {token} = useContext(LoginContext)
+  const {token} = useContext(AuthContext)
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react'
 import boburLogoHeader from '../../assets/img/bobur-logo-header.png'
-import { LoginContext } from '../../context/login-contex'
+import { AuthContext } from '../../context/auth-contex'
 import './login.scss'
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
     const emailRef = useRef()
     const passwordRef = useRef()
     
-    const {setToken} = useContext(LoginContext)
+    const {setToken} = useContext(AuthContext)
 
     const handleFormSubmit = async (e) => {
         e.preventDefault()

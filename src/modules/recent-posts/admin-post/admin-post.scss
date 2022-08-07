@@ -34,10 +34,15 @@
     display: block;
     margin-top: 25px;
     margin-bottom: 50px;
+}
+
+.admin-left-explore{
+    text-decoration: none;
+
     > img{
         transform: translateY(7px);
         margin-left: 12px;
-        background: #F4F4F4;
+        background: #cfcdcd;
         border-radius: 3px;
         padding: 8px 6px;
     }
@@ -116,7 +121,7 @@
 
 
 .pagination{
-    margin-right: auto;
+    margin-left: auto;
     list-style: none;
     display: flex;
     margin-top: 55px;
@@ -125,6 +130,10 @@
 
 .pagination-item{
     margin: 0 8px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
 
 .pagination-item > a{

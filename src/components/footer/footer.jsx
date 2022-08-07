@@ -1,14 +1,15 @@
 import boburLogoFooter from '../../assets/img/bobur-logo-footer.png'
 import './footer.scss'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return(
         <>
         <footer>
             <div className='footer container'>
-                <a href="#">
+                <Link to='/'>
                     <img src={boburLogoFooter} alt="" />
-                </a>
+                </Link>
                 <div className='footer-fight'>
                     <h2>FIGHT WITH ME ON:</h2>
                     <ul className='footer-fight-item'>

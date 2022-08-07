@@ -7,9 +7,9 @@ const Header = () => {
     return(
         <>
             <header className="header container">
-                <a href="#">
+                <Link to='/'>
                     <img src={bourLogo} alt="bobur-logo" />
-                </a>
+                </Link>
                 <ul className="header-items">
                     <li>
                         <Link className='header-item' to='/all'>All</Link>
