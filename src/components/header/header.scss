@@ -12,6 +12,19 @@
     background: #E5E5E5;
 }
 
+.modal-open{
+    right: 3%;
+    bottom: 5%;
+    position: fixed;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(45, 170, 232);
+    color: #E5E5E5;
+}
+
 
 .header-items{
     list-style: none;
@@ -63,7 +76,7 @@
     color: #474747;
 }
 
-.header > button{
+.search-btn{
     width: 40px;
     height: 40px;
     background: #ffba9d;
@@ -202,7 +215,7 @@
         width: 320px;
     }
 
-    .header > button{
+    .search-btn{
         width: 40px;
         height: 40px;
         background: #ffba9d;
@@ -228,7 +241,7 @@
 
 @media screen and (max-width: 478px) {
     
-    .header > button{
+    .search-btn{
         width: 40px;
         height: 40px;
         transform: translateX(165px) translateY(-40px);
@@ -245,7 +258,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .header > button{
+    .search-btn{
         transform: translateX(125px) translateY(-40px);
     }
 }

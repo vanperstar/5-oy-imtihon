@@ -1,41 +1,26 @@
-import { useContext, useRef } from 'react'
+import { useRef } from 'react'
 import boburLogoHeader from '../../assets/img/bobur-logo-header.png'
-import { AuthContext } from '../../context/auth-contex'
+import { fetchToken } from './login-slice'
+import { useSelector, useDispatch } from 'react-redux'
 import './login.scss'
 
 const Login = () => {
 
+    const dispetch = useDispatch()
     const emailRef = useRef()
     const passwordRef = useRef()
     
-    const {setToken} = useContext(AuthContext)
+    useSelector((state ) => {
+        state.token.token && localStorage.setItem("token", JSON.stringify(state.token.token))
+    }) 
 
     const handleFormSubmit = async (e) => {
         e.preventDefault()  
-        const email = emailRef.current.value
-        const password = passwordRef.current.value
-
-
-        if(email.trim() && password.trim()) {
-            // const res = await fetch(" https://n36-blog.herokuapp.com/login?login=Nurulloh&password=nur2004ub14", {
-            const res = await fetch(" https://reqres.in/api/login", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email,
-                    password,
-                })
-            })
-
-            if(res.ok) {
-                const data = await res.json()
-                localStorage.getItem('token', JSON.stringify(data.token))
-                setToken(data.token)
-            }
-
-        }
+        dispetch(fetchToken({
+        login: emailRef.current.value,
+        password: passwordRef.current.value,        
+    }))
+    e.target.reset()
     }
     
     return(
@@ -45,10 +30,10 @@ const Login = () => {
                 <a href="#">
                     <img src={boburLogoHeader} alt="" />
                 </a>
-                <form className='login-form' action='#' method='POST' onSubmit={handleFormSubmit}>
+                <form className='login-form' onSubmit={handleFormSubmit}>
                     <h2>Login</h2>
-                    <input ref={emailRef} type="email" name="email" placeholder='Login' />
-                    <input ref={passwordRef} type="password" name="password" placeholder='Password' />
+                    <input defaultValue={'Nurulloh'} ref={emailRef} type="text" name="email" placeholder='Login' />
+                    <input defaultValue={'nur2004ub14'} ref={passwordRef} type="password" name="password" placeholder='Password' />
                     <button type="submit">Submit</button>
                 </form>
             </div>

@@ -96,6 +96,8 @@
 }
 
 .btn-delete{
+    position: absolute;
+    transform: translateX(35rem) translateY(-5rem);
     border: none;
     padding: 10px 20px;
     background: red;
@@ -206,6 +208,18 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+    .btn-delete{
+        transform: translateX(30rem) translateY(-5rem);
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .btn-delete{
+        transform: translateX(30rem) translateY(-6rem);
+    }
+}
+
 
 @media screen and (max-width: 975px) {
     .admin-left{
@@ -214,6 +228,10 @@
 
     .posts{
         width: 100%;
+    }
+
+    .btn-delete{
+        transform: translateX();
     }
 }
 
@@ -231,10 +249,18 @@
     .posts-item > b{
         margin-left: 40%;
     }
+
+    .btn-delete{
+        transform: translateX(20rem) translateY(-3.5rem);
+    }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 435px) {
     .posts-item > b{
         margin-left: 30%;
+    }
+
+    .btn-delete{
+        transform: translateX(15rem) translateY(-5rem);
     }
 }

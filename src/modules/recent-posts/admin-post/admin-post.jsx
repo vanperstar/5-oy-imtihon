@@ -12,7 +12,7 @@ import Footer from "../../../components/footer/footer";
 import { ListItem } from "../admin-post-item/admin-post-item";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { deleteUser, getUsers } from "../../../store/reducer/user.slice";
+import { deleteUser, deleteUsers, getUsers } from "../../../store/reducer/user.slice";
 import Modal from "../../../components/modal/modal";
 
 
@@ -23,29 +23,20 @@ const AdminPost = () => {
     const handleDeleteUser = (e) => {
         if(e.target.matches('button[data-id')) {
             const id = e.target.dataset.id
-            dispatch(deleteUser(id))
+            dispatch(deleteUsers(id))
         }
     }
+    // dispatch(getUsers())
     
     useEffect(() => {
-        if(status === 'idle') {
+        // if(status === 'idle') {
             dispatch(getUsers())
-        }
+        // }
     }, [dispatch, status])
-
-    const [open, setOpen] = useState(false)
 
     return(
         <>
             <Header />
-            <div className="modal">
-                <button onClick={setOpen.bind(null, true)}>Modal</button>
-                {open && (
-                    <Modal
-                    setOpen={setOpen} 
-                    />
-                )}
-            </div>
             <div className='admin-post container'>
                 <div className='admin-left'>
                     <h2>What I do!</h2>

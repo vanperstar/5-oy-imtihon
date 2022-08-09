@@ -1,9 +1,12 @@
-.modal{
+.modal {
     position: fixed;
     z-index: 100;
     bottom: 0;
     right: 0;
     background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal > div{
@@ -11,17 +14,35 @@
     height: 100vh;
 }
 
+.modal-header{
+    display: flex;
+    align-items: center;
+
+    >h3{
+        margin-right: auto;
+    }
+}
+
 .modal-dialog{
     width: 30%;
     position: absolute;
     z-index: 10;
     top: 200px;
-    // transform: translateX(35rem);
-    right: 40%;
+    right: 35%;
     padding: 20px;
     background-color: #fff;
     border: 1px solid red;
     border-radius: 10px;
+}
+
+.modal-select{
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 8px;
+
+    >option{
+        border-radius: 10px;
+    }
 }
 
 .modal-button{
