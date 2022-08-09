@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
 const Base_URL = 'https://n36-blog.herokuapp.com'
 const id = 287
-// const { token }  = JSON.parse(localStorage.getItem('token'))
 const name = 'users';
 export const getUsers = createAsyncThunk("users/getUsers", async function (_, {rejectWithValue}) {
     try {
@@ -26,11 +25,12 @@ export const getUsers = createAsyncThunk("users/getUsers", async function (_, {r
 
 export const setUsers = createAsyncThunk("users/setUsers", async function (newPost, {rejectWithValue}) {
     try {
+        const { token }  = JSON.parse(localStorage.getItem('token'))
         const res = await fetch(`${Base_URL}/posts`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
-                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1MzY3MGU4LTY3YzAtNGZiZi1hYmVjLTk2ZDUxMTQwMjM5YSIsInVzZXJfbmFtZSI6Ik51cnVsbG9oIiwidXNlcl9wYXNzd29yZCI6Im51cjIwMDR1YjE0IiwiaWF0IjoxNjYwMDc3MDEwfQ.0jikjHgxMGn6Dj5NinII8IB3Nipa89qpl6o6Utv--DY",
+                token: token,
                
             },
             body: JSON.stringify(newPost),
@@ -47,10 +47,11 @@ export const setUsers = createAsyncThunk("users/setUsers", async function (newPo
 
 export const deleteUsers = createAsyncThunk("users/deleteUsers", async function (id, {rejectWithValue}) {
     try {
+        const { token }  = JSON.parse(localStorage.getItem('token'))
         const res = await fetch(`${Base_URL}/posts/${id}`, {
             method: 'Delete',
             headers: {
-                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1MzY3MGU4LTY3YzAtNGZiZi1hYmVjLTk2ZDUxMTQwMjM5YSIsInVzZXJfbmFtZSI6Ik51cnVsbG9oIiwidXNlcl9wYXNzd29yZCI6Im51cjIwMDR1YjE0IiwiaWF0IjoxNjYwMDc3MDEwfQ.0jikjHgxMGn6Dj5NinII8IB3Nipa89qpl6o6Utv--DY",
+                token: token,
                 'Content-Type': 'application/json',
             },
         });
@@ -66,11 +67,12 @@ export const deleteUsers = createAsyncThunk("users/deleteUsers", async function 
 
 export const editUsers = createAsyncThunk("users/editUsers", async function (newPost, {rejectWithValue}) {
     try {
+        const { token }  = JSON.parse(localStorage.getItem('token'))
         const res = await fetch(`${Base_URL}/posts/491`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json',
-                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1MzY3MGU4LTY3YzAtNGZiZi1hYmVjLTk2ZDUxMTQwMjM5YSIsInVzZXJfbmFtZSI6Ik51cnVsbG9oIiwidXNlcl9wYXNzd29yZCI6Im51cjIwMDR1YjE0IiwiaWF0IjoxNjYwMDc3MDEwfQ.0jikjHgxMGn6Dj5NinII8IB3Nipa89qpl6o6Utv--DY",
+                token: token,
             },
             body: JSON.stringify(newPost),
         });
