@@ -55,8 +55,8 @@ const Modal = () => {
                     <input ref={bodyRef} type="text" placeholder='Body' />
                     </div>
                     <div className="modal-button">
-                        <button type='reset' onClick={setOpen.bind(null, false)}>Close</button>
-                        <button type='submit'>Save</button>
+                        <button className='close-btn' onClick={setOpen.bind(null, false)}>Close</button>
+                        <button className='save-btn' type='submit'>Save</button>
                     </div>
                 </div>
                 </form>

@@ -73,7 +73,17 @@
     margin-top: 15px;
 }
 
-.modal-button > button{
+.close-btn{
+    background-color: rgb(221, 25, 25);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-top: 15px;
+     margin-right: 10px;
+}
+
+.save-btn{
     background-color: darkcyan;
     padding: 10px 20px;
     border: none;
