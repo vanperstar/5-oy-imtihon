@@ -11,14 +11,14 @@ const Login = () => {
     const {setToken} = useContext(AuthContext)
 
     const handleFormSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault()  
         const email = emailRef.current.value
         const password = passwordRef.current.value
 
 
         if(email.trim() && password.trim()) {
-            const res = await fetch(" https://n36-blog.herokuapp.com/login?login=Nurulloh&password=nur2004ub14", {
-            // const res = await fetch(" https://reqres.in/api/login", {
+            // const res = await fetch(" https://n36-blog.herokuapp.com/login?login=Nurulloh&password=nur2004ub14", {
+            const res = await fetch(" https://reqres.in/api/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const Login = () => {
 
         }
     }
-
+    
     return(
         <>
         <div className='container'>
