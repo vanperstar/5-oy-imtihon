@@ -123,7 +123,7 @@
         list-style: none;
         display: none;
         margin-left: auto;
-        gap: 10px;
+        
     }
 
     .header-items > li{
@@ -131,6 +131,7 @@
         font-size: 14px;
         line-height: 21px;
         color: #9A9A9A;
+        margin-top: 50px;
     
         &:active{
             color: #3D3D3D;
