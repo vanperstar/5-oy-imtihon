@@ -13,26 +13,24 @@ import { ListItem } from "../admin-post-item/admin-post-item";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { deleteUser, deleteUsers, getUsers } from "../../../store/reducer/user.slice";
-import Modal from "../../../components/modal/modal";
-
 
 const AdminPost = () => {
     const users = useSelector(state => state.users.users) 
     const status = useSelector(state => state.users.status) 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        // if(status === 'idle') {
+            dispatch(getUsers())
+        // }
+    }, [dispatch, status])
+    
     const handleDeleteUser = (e) => {
         if(e.target.matches('button[data-id')) {
             const id = e.target.dataset.id
             dispatch(deleteUsers(id))
         }
     }
-    // dispatch(getUsers())
-    
-    useEffect(() => {
-        // if(status === 'idle') {
-            dispatch(getUsers())
-        // }
-    }, [dispatch, status])
 
     return(
         <>

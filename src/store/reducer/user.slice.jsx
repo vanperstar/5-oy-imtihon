@@ -51,8 +51,8 @@ export const deleteUsers = createAsyncThunk("users/deleteUsers", async function 
         const res = await fetch(`${Base_URL}/posts/${id}`, {
             method: 'Delete',
             headers: {
-                token: token,
                 'Content-Type': 'application/json',
+                token: token,
             },
         });
         if(!res.ok) {

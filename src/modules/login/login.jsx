@@ -21,8 +21,8 @@ const Login = () => {
         login: emailRef.current.value,
         password: passwordRef.current.value,        
     }))
-    dispetch(getUsers())
     e.target.reset()
+    dispetch(getUsers())
     }
     
     return(
