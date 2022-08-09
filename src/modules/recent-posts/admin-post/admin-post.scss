@@ -1,5 +1,21 @@
 @import '../../../assets/scss/general.scss';
 
+.modal{
+    >button{
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background: #000;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
 .admin-post{
     display: flex;
     margin-top: 90px;
@@ -77,6 +93,47 @@
     list-style: none;
     margin-top: 46px;
     text-decoration: none;
+}
+
+.btn-delete{
+    border: none;
+    padding: 10px 20px;
+    background: red;
+    color: #DFDFDF;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+        // opacity: 0.8;
+        background: #fff;
+        color: red;
+    }
+    &:active{
+        background: red;
+        color: #a7a1a1da;
+        opacity: 0.8;
+    }
+}
+
+.btn-edit{
+    border: none;
+    background: rgb(47, 133, 215);
+    color: #DFDFDF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover{
+        color: rgb(47, 133, 215);
+        background: #DFDFDF;
+    }
+
+    &:active{
+        background: rgb(47, 133, 215);
+        color: #bbbabaf3;
+        opacity: 0.8;
+    }
 }
 
 .posts-item > span{

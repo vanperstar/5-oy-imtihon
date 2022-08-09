@@ -3,22 +3,37 @@ import hour from '../../../assets/img/hour.png'
 import clap from '../../../assets/img/clap.png'
 import share from '../../../assets/img/share.png'
 import infarmationImg from '../../../assets/img/infarmation-img.png'
+import { useState } from 'react'
 
 const InfarmationAdmin = () => {
-    return (
-        <>
+
+    let [count, setCount] = useState(125)
+
+    const handleCount = () => {
+        setCount(count += 1)
+    }
+    
+    let [sharea, setSharea] = useState(70)
+
+    const handleSharea = () => {
+        setSharea(sharea += 1)
+    }
+
+
+    return (      
+        <> 
         <div className='infarmation-admin container'>
             <div className='infarmation-admin-item'>
-                <div className='infarmation-admin-button'>
-                    <button type="submit">
-                        <img src={clap} alt="" />
-                        <div>125</div>
-                    </button>
-                    <button type="submit">
-                        <img src={share} alt="" />
-                        <div>70</div>
-                    </button>
-                </div>
+            <div className='infarmation-admin-button'>
+                <button onClick={handleCount} type="submit">
+                    <img src={clap} alt="" />
+                    <div>{count}</div>
+                </button>
+                <button onClick={handleSharea} type="submit">
+                    <img src={share} alt="" />
+                    <div>{sharea}</div>
+                </button>
+            </div>
                 <div className='infarmation-admin-post'>
                     <div className='infarmation-admin-post-item'>
                         <div>User interface</div>

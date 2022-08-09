@@ -1,0 +1,89 @@
+.modal{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.modal > div{
+    width: 100%;
+    height: 100vh;
+}
+
+.modal-dialog{
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    // transform: translateX(35rem);
+    right: 40%;
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.modal-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-button > button{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-button > button:hover{
+    opacity: 0.7;
+}
+
+.modal-content{
+    width: 300px;
+}
+
+.modal-content > input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.modal-button > button{
+    background-color: darkcyan;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .modal-dialog {
+        right: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .modal-dialog {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .modal-dialog {
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .modal-dialog {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .modal-dialog {
+        right: 7%;
+    }
+}
