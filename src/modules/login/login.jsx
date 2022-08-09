@@ -3,6 +3,7 @@ import boburLogoHeader from '../../assets/img/bobur-logo-header.png'
 import { fetchToken } from './login-slice'
 import { useSelector, useDispatch } from 'react-redux'
 import './login.scss'
+import { getUsers } from '../../store/reducer/user.slice'
 
 const Login = () => {
 
@@ -20,6 +21,7 @@ const Login = () => {
         login: emailRef.current.value,
         password: passwordRef.current.value,        
     }))
+    dispetch(getUsers())
     e.target.reset()
     }
     
